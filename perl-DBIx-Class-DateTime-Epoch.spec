@@ -17,6 +17,7 @@ BuildRequires: perl(DBIx::Class::TimeStamp)
 BuildRequires: perl(DateTime)
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(Test::More)
+
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
@@ -26,22 +27,15 @@ values for the specified columns. This module is essentially an extension
 to the DBIx::Class::InflateColumn::DateTime manpage so all of the settings,
 including 'locale' and 'timezone', are also valid.
 
-A column will be recognized as an epoch time given one of the following
-scenarios:
-
-* * 'data_type' is an 'int' of some sort and 'inflate_datetime' is also set
-  to a true value
-
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-
-%{make}
+%make
 
 %check
-%{make} test
+%make test
 
 %install
 rm -rf %buildroot
@@ -55,5 +49,3 @@ rm -rf %buildroot
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
