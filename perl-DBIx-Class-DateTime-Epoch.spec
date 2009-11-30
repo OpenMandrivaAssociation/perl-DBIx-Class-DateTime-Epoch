@@ -13,6 +13,7 @@ Source0:    http://www.cpan.org/modules/by-module/DBIx/%{upstream_name}-%{upstre
 
 BuildRequires: perl(DBICx::TestDatabase)
 BuildRequires: perl(DBIx::Class)
+BuildRequires: perl(DBIx::Class::DynamicDefault)
 BuildRequires: perl(DBIx::Class::TimeStamp)
 BuildRequires: perl(DateTime)
 BuildRequires: perl(ExtUtils::MakeMaker)
