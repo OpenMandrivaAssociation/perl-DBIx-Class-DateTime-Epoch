@@ -16,6 +16,7 @@ BuildRequires: perl(DBIx::Class)
 BuildRequires: perl(DBIx::Class::DynamicDefault)
 BuildRequires: perl(DBIx::Class::TimeStamp)
 BuildRequires: perl(DateTime)
+BuildRequires: perl(DateTime::Format::SQLite)
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(Test::More)
 
