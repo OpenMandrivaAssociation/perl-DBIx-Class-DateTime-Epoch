@@ -1,15 +1,15 @@
 %define upstream_name    DBIx-Class-DateTime-Epoch
-%define upstream_version 0.07
+%define upstream_version 0.10
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Automatic inflation/deflation of epoch-based columns to/from DateTime objects
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/DBIx/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/bricas/dbix-class-datetime-epoch
+Source0:	https://cpan.metacpan.org/authors/id/B/BR/BRICAS/DBIx-Class-DateTime-Epoch-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
