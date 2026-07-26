@@ -1,15 +1,13 @@
 %define upstream_name    DBIx-Class-DateTime-Epoch
-%define upstream_version 0.10
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.10
+Release:	2
 
 Summary:	Automatic inflation/deflation of epoch-based columns to/from DateTime objects
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/bricas/dbix-class-datetime-epoch
-Source0:	https://cpan.metacpan.org/authors/id/B/BR/BRICAS/DBIx-Class-DateTime-Epoch-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/B/BR/BRICAS/DBIx-Class-DateTime-Epoch-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -32,7 +30,7 @@ to the DBIx::Class::InflateColumn::DateTime manpage so all of the settings,
 including 'locale' and 'timezone', are also valid.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
